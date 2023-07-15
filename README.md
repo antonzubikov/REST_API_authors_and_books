@@ -28,3 +28,4 @@
 ```
 python pip install -r requirements.txt
 ```
+* Запустить файл `routes.py`
