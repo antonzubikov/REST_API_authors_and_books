@@ -20,3 +20,11 @@
 * Flask–RESTful (Flask RESTful architecture building tool; 0.3.10);
 * Marshmallow (simplified object serialization; 3.19.0);
 * SQLite3 (relational database; 3.39.5)
+
+## Installation:
+* Необходимо скопировать все содержимое репозитория в отдельный каталог;
+* Установить все связи из `requirements.txt`:
+
+```
+python pip install -r requirements.txt
+```
