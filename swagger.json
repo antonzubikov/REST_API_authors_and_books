@@ -1,0 +1,192 @@
+{
+  "definitions": {
+    "Book": {
+      "properties": {
+        "author": {
+          "type": "string"
+        },
+        "id": {
+          "readOnly": true,
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "author",
+        "title"
+      ],
+      "type": "object"
+    }
+  },
+  "info": {
+    "title": "BookList",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/authors": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "new author creation",
+            "schema": {
+              "$ref": "#/definitions/Author"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "The author has been created",
+            "schema": {
+              "$ref": "#/definitions/Author"
+            }
+          }
+        },
+        "summary": "This is an endpoint for author creation.",
+        "tags": [
+          "authors"
+        ]
+      }
+    },
+    "/api/authors/{id}": {
+      "delete": {
+        "responses": {
+          "200": {
+            "description": "Delete author by ID",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Author"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "summary": "This is an endpoint for delete the author by ID.",
+        "tags": [
+          "authors"
+        ]
+      },
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Authors data",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Author"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "summary": "This is an endpoint for obtaining the author by ID.",
+        "tags": [
+          "authors"
+        ]
+      }
+    },
+    "/api/books": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Books data",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Book"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "summary": "This is an endpoint for obtaining the books list.",
+        "tags": [
+          "books"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "new book params",
+            "schema": {
+              "$ref": "#/definitions/Book"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "The book has been created",
+            "schema": {
+              "$ref": "#/definitions/Book"
+            }
+          }
+        },
+        "summary": "This is an endpoint for book creation.",
+        "tags": [
+          "books"
+        ]
+      }
+    },
+    "/api/books/{id}": {
+      "delete": {
+        "responses": {
+          "200": {
+            "description": "Delete book by ID",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Book"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "summary": "This is an endpoint for delete the book by ID.",
+        "tags": [
+          "books"
+        ]
+      },
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Book by ID",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Book"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "summary": "This is an endpoint for obtaining the book by ID.",
+        "tags": [
+          "books"
+        ]
+      },
+      "put": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "update book params",
+            "schema": {
+              "$ref": "#/definitions/Book"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The book has been update",
+            "schema": {
+              "$ref": "#/definitions/Book"
+            }
+          }
+        },
+        "summary": "This is an endpoint for book update.",
+        "tags": [
+          "books"
+        ]
+      }
+    }
+  },
+  "swagger": "2.0"
+}
