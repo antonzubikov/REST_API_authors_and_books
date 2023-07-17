@@ -3,6 +3,9 @@
 ## Project description:
 Это REST API контракт для создания, просмотра, редактирования и удаления записей об авторах и книгах.
 
+## Swagger UI specifications with Open API:
+* ```"/apidocs"```
+
 ## API available methods:
 * GET ```"/api/books"``` — просмотр всех доступных книг;
 * POST ```"/api/books"``` — добавление новой книги;
@@ -19,7 +22,10 @@
 * Flask (Python web framework; 2.3.2);
 * Flask–RESTful (Flask RESTful architecture building tool; 0.3.10);
 * Marshmallow (simplified object serialization; 3.19.0);
-* SQLite3 (relational database; 3.39.5)
+* SQLite3 (relational database; 3.39.5);
+* apispec (API specifications tools; 6.0.2);
+* apispec–webframeworks (API specifications tools; 0.5.2);
+* flasgger (Swagger UI tool; 0.9.7.1)
 
 ## Installation:
 * Необходимо скопировать всё содержимое репозитория в отдельный каталог;
